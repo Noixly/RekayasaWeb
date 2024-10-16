@@ -1,0 +1,23 @@
+<?php
+$json_data = '[
+    {"kota": "Semarang", "landmark": "Lawang Sewu", "tarif": 20000},
+    {"kota": "Yogyakarta", "landmark": "Prambanan", "tarif": 35000},
+    {"kota": "Magelang", "landmark": "Borobudur", "tarif": 45000},
+    {"kota": "Surakarta", "landmark": "PGS", "tarif": "GRATIS"}
+]';
+
+$data = json_decode($json_data, true);
+
+echo "<table>";
+echo "<tr><th>Kota</th><th>Landmark</th><th>Tarif</th></tr>";
+
+foreach ($data as $row) {
+    echo "<tr>";
+    echo "<td>" . $row['kota'] . "</td>";
+    echo "<td>" . $row['landmark'] . "</td>";
+    echo "<td>" . $row['tarif'] . "</td>";
+    echo "</tr>";
+}
+
+echo "</table>";
+?>
