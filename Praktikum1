@@ -1,0 +1,13 @@
+<?php
+// Membuat array
+$data = array(
+    'nama' => 'Adnan Rosyid',
+    'umur' => 20,
+    'hobi' => array('Memancing', 'Berenang')
+);
+
+// Meng-encode array ke JSON
+$json_data = json_encode($data);
+
+echo $json_data; // Output: {"nama":"Adnan Rosyid","umur":20,"hobi":["Memancing","Berenang"]}
+?>
